@@ -32,7 +32,6 @@ class bombaCombustivel:
     def registrarDataHora(self):
         self.dataHora = datetime.now()
 
-
     def extrato(self):
         print('\n===============================')
         print('          Nota Fiscal          ')
@@ -48,16 +47,18 @@ class bombaCombustivel:
         print(f'\n===============================')
         print(f'         Posto De Teste          ')
         print(f'===============================')
-        print(f'\nTipo combustivel:    {self.tipocombustivel}')
-
         if self.resultadoValor:
             print(f"\nLitros abastecidos: {self.resultadoValor} reais")
         elif self.resultadoLitro:
             print(f"\nLitros abastecidos: {self.resultadoLitro} reais")
-
         else:
             print("Volte sempre!")
-        print(f'Data/Hora abastecimento: {self.dataHora.strftime("%d/%m/%Y %H:%M:%S")}')
-        print(f'\n===============================')
+        if self.dataHora:
+            print(f'\nTipo combustivel:    {self.tipocombustivel}')
+            print(f'\nData/Hora abastecimento: {self.dataHora.strftime("%d/%m/%Y %H:%M:%S")}')
+        else:
+            print("\nData/Hora abastecimento: Não disponível")
+        print("Volte sempre!")
+        print(f'===============================')
 
 
