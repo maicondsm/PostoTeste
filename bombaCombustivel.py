@@ -1,4 +1,5 @@
 from datetime import datetime
+
 class bombaCombustivel:
     def __init__(self, tipocombustivel, valorlitro, estoquecombustivel):
         self.tipocombustivel = tipocombustivel
@@ -38,11 +39,11 @@ class bombaCombustivel:
         print('===============================')
 
         if self.frentista:
-            print('Frentista responsavel: ')
+            print('Frentista responsável:')
             print(f'Nome: {self.frentista.nome}')
             print(f'CPF: {self.frentista.cpf}')
         else:
-            print(f'Responsavel: Não especificado')
+            print(f'Responsável: Não especificado')
 
         print(f'\n===============================')
         print(f'         Posto De Teste          ')
@@ -54,11 +55,9 @@ class bombaCombustivel:
         else:
             print("Volte sempre!")
         if self.dataHora:
-            print(f'\nTipo combustivel:    {self.tipocombustivel}')
+            print(f'\nTipo combustível:    {self.tipocombustivel}')
             print(f'\nData/Hora abastecimento: {self.dataHora.strftime("%d/%m/%Y %H:%M:%S")}')
         else:
             print("\nData/Hora abastecimento: Não disponível")
         print("Volte sempre!")
         print(f'===============================')
-
-
